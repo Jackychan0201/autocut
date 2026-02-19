@@ -1,0 +1,110 @@
+services:
+  db:
+    image: postgres:15
+    restart: always
+    env_file:
+      - .env
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      - ./db_init:/docker-entrypoint-initdb.d:ro
+    ports:
+      - "5432:5432"
+
+  scraper:
+    build: ./scraper
+    env_file:
+      - .env
+    depends_on:
+      - db
+    command: ["python", "LinkScraper.py"]
+    volumes:
+      - ./scraper:/app
+      - ./db_scripts:/app/db_scripts
+    restart: "no"
+
+  downloader:
+    build: ./downloader
+    env_file:
+      - .env
+    depends_on:
+      - db
+    volumes:
+      - ./downloader:/app
+      - ./downloads:/downloads
+      - ./db_scripts:/app/db_scripts  
+    restart: "no"
+
+  transcriber:
+    build: ./transcriber
+    env_file:
+      - .env
+    depends_on:
+      - db
+    volumes:
+      - ./downloads:/downloads
+      - ./transcripts:/transcripts
+      - ./transcripts_simple:/transcripts_simple
+    restart: "no"
+
+  highlighter:
+    build: ./highlighter
+    env_file:
+      - .env
+    depends_on:
+      - transcriber
+    volumes:
+      - ./highlighter:/app
+      - ./transcripts_simple:/transcripts_simple
+      - ./highlights:/highlights
+    restart: "no"
+
+  clipper:
+    build: ./clipper
+    env_file:
+      - .env
+    depends_on:
+      - highlighter
+    volumes:
+      - ./downloads:/downloads
+      - ./highlights:/highlights
+      - ./clips:/clips
+    restart: "no"
+
+  editor:
+    build:
+      context: ./editor
+      dockerfile: Dockerfile
+    container_name: autoshorts-editor
+    volumes:
+      - ./editor:/app
+      - ./downloads:/downloads
+      - ./highlights:/highlights
+      - ./clips:/clips
+      - ./transcripts:/transcripts
+      - ./transcripts_simple:/transcripts_simple
+      - ./edited_clips:/edited_clips
+      - ./hooks:/hooks
+      - ./editor/bg_videos:/bg_videos
+      - ./video_usage_state.json:/app/video_usage_state.json
+    working_dir: /app
+
+  uploader:
+    build: ./uploader
+    volumes:
+      - ./edited_clips:/app/edited_clips
+      - ./uploader:/app
+      - ./highlights:/highlights
+    environment:
+      - CHECK_INTERVAL=60
+      - PRIVACY_STATUS=public
+      - HIGHLIGHTS_DIR=/highlights
+    restart: "no"
+
+
+volumes:
+  db_data:
+
