@@ -1,0 +1,14 @@
+.env
+.idea/
+*.mp4
+*.mov
+/edited_clips
+/transcripts_simple
+/highlights
+/transcripts
+/clips
+/bg_videos
+/uploader/token.pickle
+/uploader/client_secrets.json
+node_modules
+
