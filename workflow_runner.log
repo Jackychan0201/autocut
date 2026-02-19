@@ -3346,3 +3346,370 @@
 2026-02-18 10:49:14,101 [INFO]   [Output] 2026-02-18 10:49:14,100 - INFO - Moved clip_01_viral.mp4 to /Users/yauhenibudzko/Desktop/autoshorts/edited_clips/uploaded
 2026-02-18 10:49:14,101 [INFO]   [Output] 2026-02-18 10:49:14,100 - INFO - Upload task finished. Exiting.
 2026-02-18 10:49:14,196 [INFO] ✅ Single upload task finished. stopping.
+2026-02-19 14:01:04,533 [INFO] ============================================================
+2026-02-19 14:01:04,533 [INFO] 🤖 Master Workflow Runner Starting
+2026-02-19 14:01:04,533 [INFO] ============================================================
+2026-02-19 14:01:04,676 [INFO] ⚙️ Starting full pipeline (Download -> Transcribe -> Highlight -> Clip -> Edit -> Upload)...
+2026-02-19 14:01:04,677 [INFO] 🚀 Executing: python3 /Users/yauhenibudzko/Desktop/autocut/downloader/Downloader.py
+2026-02-19 14:01:05,196 [INFO]   [Output] 2026-02-19 14:01:05,196 [INFO] 🎬 Starting download: https://www.youtube.com/watch?v=j0YENi6U0tE
+2026-02-19 14:01:05,279 [INFO]   [Output] [youtube] Extracting URL: https://www.youtube.com/watch?v=j0YENi6U0tE
+2026-02-19 14:01:05,280 [INFO]   [Output] [youtube] j0YENi6U0tE: Downloading webpage
+2026-02-19 14:01:06,021 [INFO]   [Output] [youtube] j0YENi6U0tE: Downloading android player API JSON
+2026-02-19 14:01:06,176 [INFO]   [Output] WARNING: [youtube] j0YENi6U0tE: android client https formats require a GVS PO Token which was not provided. They will be skipped as they may yield HTTP Error 403. You can manually pass a GVS PO Token for this client with --extractor-args "youtube:po_token=android.gvs+XXX". For more information, refer to  https://github.com/yt-dlp/yt-dlp/wiki/PO-Token-Guide
+2026-02-19 14:01:06,251 [INFO]   [Output] [info] j0YENi6U0tE: Downloading 1 format(s): 18
+2026-02-19 14:01:06,431 [INFO]   [Output] [download] Destination: /Users/yauhenibudzko/Desktop/autocut/downloads/You’re Not Behind (Yet)： How to Learn AI in 19 Minutes [j0YENi6U0tE].mp4
+2026-02-19 14:01:06,431 [INFO]   [Output] 
+2026-02-19 14:01:06,432 [INFO]   [Output] [download]   0.0% of   42.66MiB at  508.96KiB/s ETA 01:26
+2026-02-19 14:01:06,432 [INFO]   [Output] [download]   0.0% of   42.66MiB at    1.27MiB/s ETA 00:33
+2026-02-19 14:01:06,432 [INFO]   [Output] [download]   0.0% of   42.66MiB at    2.56MiB/s ETA 00:16
+2026-02-19 14:01:06,444 [INFO]   [Output] [download]   0.0% of   42.66MiB at    5.06MiB/s ETA 00:08
+2026-02-19 14:01:06,465 [INFO]   [Output] [download]   0.1% of   42.66MiB at    2.12MiB/s ETA 00:20
+2026-02-19 14:01:06,474 [INFO]   [Output] [download]   0.1% of   42.66MiB at    1.75MiB/s ETA 00:24
+2026-02-19 14:01:06,494 [INFO]   [Output] [download]   0.3% of   42.66MiB at    2.75MiB/s ETA 00:15
+2026-02-19 14:01:06,510 [INFO]   [Output] [download]   0.6% of   42.66MiB at    3.85MiB/s ETA 00:11
+2026-02-19 14:01:06,536 [INFO]   [Output] [download]   1.2% of   42.66MiB at    6.16MiB/s ETA 00:06
+2026-02-19 14:01:06,584 [INFO]   [Output] [download]   2.3% of   42.66MiB at    9.41MiB/s ETA 00:04
+2026-02-19 14:01:06,688 [INFO]   [Output] [download]   4.7% of   42.66MiB at   12.97MiB/s ETA 00:03
+2026-02-19 14:01:06,938 [INFO]   [Output] [download]   9.4% of   42.66MiB at   15.47MiB/s ETA 00:02
+2026-02-19 14:01:07,069 [INFO]   [Output] [download]  18.8% of   42.66MiB at   15.73MiB/s ETA 00:02
+2026-02-19 14:01:07,334 [INFO]   [Output] [download]  22.4% of   42.66MiB at   14.95MiB/s ETA 00:02
+2026-02-19 14:01:07,335 [INFO]   [Output] [download]  22.4% of   42.66MiB at  131.23KiB/s ETA 04:18
+2026-02-19 14:01:07,335 [INFO]   [Output] [download]  22.4% of   42.66MiB at  370.41KiB/s ETA 01:31
+2026-02-19 14:01:07,335 [INFO]   [Output] [download]  22.4% of   42.66MiB at  834.45KiB/s ETA 00:40
+2026-02-19 14:01:07,365 [INFO]   [Output] [download]  22.5% of   42.66MiB at    1.70MiB/s ETA 00:19
+2026-02-19 14:01:07,394 [INFO]   [Output] [download]  22.5% of   42.66MiB at  799.71KiB/s ETA 00:42
+2026-02-19 14:01:07,425 [INFO]   [Output] [download]  22.6% of   42.66MiB at  938.07KiB/s ETA 00:36
+2026-02-19 14:01:07,463 [INFO]   [Output] [download]  22.7% of   42.66MiB at    1.26MiB/s ETA 00:26
+2026-02-19 14:01:07,559 [INFO]   [Output] [download]  23.0% of   42.66MiB at    1.83MiB/s ETA 00:17
+2026-02-19 14:01:07,575 [INFO]   [Output] [download]  23.6% of   42.66MiB at    2.14MiB/s ETA 00:15
+2026-02-19 14:01:07,637 [INFO]   [Output] [download]  24.8% of   42.66MiB at    4.02MiB/s ETA 00:07
+2026-02-19 14:01:07,737 [INFO]   [Output] [download]  27.1% of   42.66MiB at    6.44MiB/s ETA 00:04
+2026-02-19 14:01:07,959 [INFO]   [Output] [download]  31.8% of   42.66MiB at    9.75MiB/s ETA 00:02
+2026-02-19 14:01:07,997 [INFO]   [Output] [download]  41.2% of   42.66MiB at   12.65MiB/s ETA 00:01
+2026-02-19 14:01:08,236 [INFO]   [Output] [download]  45.4% of   42.66MiB at   14.59MiB/s ETA 00:01
+2026-02-19 14:01:08,236 [INFO]   [Output] [download]  45.4% of   42.66MiB at  160.28KiB/s ETA 02:29
+2026-02-19 14:01:08,237 [INFO]   [Output] [download]  45.4% of   42.66MiB at  447.76KiB/s ETA 00:53
+2026-02-19 14:01:08,237 [INFO]   [Output] [download]  45.4% of   42.66MiB at  999.70KiB/s ETA 00:23
+2026-02-19 14:01:08,270 [INFO]   [Output] [download]  45.4% of   42.66MiB at    1.97MiB/s ETA 00:11
+2026-02-19 14:01:08,300 [INFO]   [Output] [download]  45.4% of   42.66MiB at  767.40KiB/s ETA 00:31
+2026-02-19 14:01:08,333 [INFO]   [Output] [download]  45.5% of   42.66MiB at  900.31KiB/s ETA 00:26
+2026-02-19 14:01:08,373 [INFO]   [Output] [download]  45.7% of   42.66MiB at    1.20MiB/s ETA 00:19
+2026-02-19 14:01:08,412 [INFO]   [Output] [download]  45.9% of   42.66MiB at    1.74MiB/s ETA 00:13
+2026-02-19 14:01:08,454 [INFO]   [Output] [download]  46.5% of   42.66MiB at    2.73MiB/s ETA 00:08
+2026-02-19 14:01:08,500 [INFO]   [Output] [download]  47.7% of   42.66MiB at    4.45MiB/s ETA 00:05
+2026-02-19 14:01:08,589 [INFO]   [Output] [download]  50.1% of   42.66MiB at    7.42MiB/s ETA 00:02
+2026-02-19 14:01:08,773 [INFO]   [Output] [download]  54.7% of   42.66MiB at   11.14MiB/s ETA 00:01
+2026-02-19 14:01:08,853 [INFO]   [Output] [download]  64.1% of   42.66MiB at   14.72MiB/s ETA 00:01
+2026-02-19 14:01:09,049 [INFO]   [Output] [download]  68.2% of   42.66MiB at   15.67MiB/s ETA 00:00
+2026-02-19 14:01:09,049 [INFO]   [Output] [download]  68.2% of   42.66MiB at  183.73KiB/s ETA 01:15
+2026-02-19 14:01:09,049 [INFO]   [Output] [download]  68.2% of   42.66MiB at  511.33KiB/s ETA 00:27
+2026-02-19 14:01:09,050 [INFO]   [Output] [download]  68.2% of   42.66MiB at    1.12MiB/s ETA 00:12
+2026-02-19 14:01:09,081 [INFO]   [Output] [download]  68.3% of   42.66MiB at    2.31MiB/s ETA 00:05
+2026-02-19 14:01:09,111 [INFO]   [Output] [download]  68.3% of   42.66MiB at  823.92KiB/s ETA 00:16
+2026-02-19 14:01:09,141 [INFO]   [Output] [download]  68.4% of   42.66MiB at  936.48KiB/s ETA 00:14
+2026-02-19 14:01:09,177 [INFO]   [Output] [download]  68.5% of   42.66MiB at    1.27MiB/s ETA 00:10
+2026-02-19 14:01:09,211 [INFO]   [Output] [download]  68.8% of   42.66MiB at    1.87MiB/s ETA 00:07
+2026-02-19 14:01:09,249 [INFO]   [Output] [download]  69.4% of   42.66MiB at    2.97MiB/s ETA 00:04
+2026-02-19 14:01:09,295 [INFO]   [Output] [download]  70.6% of   42.66MiB at    4.85MiB/s ETA 00:02
+2026-02-19 14:01:09,390 [INFO]   [Output] [download]  72.9% of   42.66MiB at    7.94MiB/s ETA 00:01
+2026-02-19 14:01:09,563 [INFO]   [Output] [download]  77.6% of   42.66MiB at   11.55MiB/s ETA 00:00
+2026-02-19 14:01:09,640 [INFO]   [Output] [download]  87.0% of   42.66MiB at   15.40MiB/s ETA 00:00
+2026-02-19 14:01:09,808 [INFO]   [Output] [download]  90.8% of   42.66MiB at   16.12MiB/s ETA 00:00
+2026-02-19 14:01:09,808 [INFO]   [Output] [download]  90.8% of   42.66MiB at  529.45KiB/s ETA 00:07
+2026-02-19 14:01:09,808 [INFO]   [Output] [download]  90.8% of   42.66MiB at    1.34MiB/s ETA 00:02
+2026-02-19 14:01:09,808 [INFO]   [Output] [download]  90.8% of   42.66MiB at    2.86MiB/s ETA 00:01
+2026-02-19 14:01:09,820 [INFO]   [Output] [download]  90.8% of   42.66MiB at    5.70MiB/s ETA 00:00
+2026-02-19 14:01:09,833 [INFO]   [Output] [download]  90.9% of   42.66MiB at    2.05MiB/s ETA 00:01
+2026-02-19 14:01:09,847 [INFO]   [Output] [download]  90.9% of   42.66MiB at    2.21MiB/s ETA 00:01
+2026-02-19 14:01:09,863 [INFO]   [Output] [download]  91.1% of   42.66MiB at    3.01MiB/s ETA 00:01
+2026-02-19 14:01:09,878 [INFO]   [Output] [download]  91.4% of   42.66MiB at    4.35MiB/s ETA 00:00
+2026-02-19 14:01:09,902 [INFO]   [Output] [download]  92.0% of   42.66MiB at    6.94MiB/s ETA 00:00
+2026-02-19 14:01:10,066 [INFO]   [Output] [download]  93.1% of   42.66MiB at   10.34MiB/s ETA 00:00
+2026-02-19 14:01:10,156 [INFO]   [Output] [download]  95.5% of   42.66MiB at    7.68MiB/s ETA 00:00
+2026-02-19 14:01:10,158 [INFO]   [Output] [download] 100.0% of   42.66MiB at   11.23MiB/s ETA 00:00
+2026-02-19 14:01:10,158 [INFO]   [Output] [download] 100% of   42.66MiB in 00:00:03 at 10.93MiB/s  2026-02-19 14:01:10,158 [INFO] ✅ Finished downloading: /Users/yauhenibudzko/Desktop/autocut/downloads/You’re Not Behind (Yet)： How to Learn AI in 19 Minutes [j0YENi6U0tE].mp4
+2026-02-19 14:01:10,215 [INFO]   [Output] 
+2026-02-19 14:01:10,219 [INFO]   [Output] [VideoConvertor] Not converting media file "/Users/yauhenibudzko/Desktop/autocut/downloads/You’re Not Behind (Yet)： How to Learn AI in 19 Minutes [j0YENi6U0tE].mp4"; already is in target format mp4
+2026-02-19 14:01:10,273 [INFO] 🚀 Executing: python3 /Users/yauhenibudzko/Desktop/autocut/transcriber/Transcriber.py
+2026-02-19 14:01:12,549 [INFO]   [Output] 2026-02-19 14:01:12,548 [INFO] Loading Faster-Whisper model: small
+2026-02-19 14:01:12,993 [INFO]   [Output] 2026-02-19 14:01:12,993 [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
+2026-02-19 14:01:13,970 [INFO]   [Output] 2026-02-19 14:01:13,970 [INFO] Starting Transcriber Service
+2026-02-19 14:01:13,970 [INFO]   [Output] 2026-02-19 14:01:13,970 [INFO] Extracting audio from You’re Not Behind (Yet)： How to Learn AI in 19 Minutes [j0YENi6U0tE].mp4...
+2026-02-19 14:01:15,528 [INFO]   [Output] 2026-02-19 14:01:15,527 [INFO] Transcribing You’re Not Behind (Yet)： How to Learn AI in 19 Minutes [j0YENi6U0tE].mp4...
+2026-02-19 14:01:15,774 [INFO]   [Output] 2026-02-19 14:01:15,773 [INFO] Processing audio with duration 19:55.596
+2026-02-19 14:01:16,709 [INFO]   [Output] 2026-02-19 14:01:16,708 [INFO] Transcription language: en (1.00)
+2026-02-19 14:08:03,960 [INFO]   [Output] 2026-02-19 14:08:03,959 [INFO] Transcription finished in 408.43s
+2026-02-19 14:08:03,991 [INFO]   [Output] 2026-02-19 14:08:03,991 [INFO] Saved: You’re Not Behind (Yet)： How to Learn AI in 19 Minutes [j0YENi6U0tE].json
+2026-02-19 14:08:04,011 [INFO]   [Output] 2026-02-19 14:08:04,011 [INFO] Saved: You’re Not Behind (Yet)： How to Learn AI in 19 Minutes [j0YENi6U0tE]_simple.json
+2026-02-19 14:08:04,016 [INFO]   [Output] 2026-02-19 14:08:04,016 [INFO] Transcriber Process Complete
+2026-02-19 14:08:04,135 [INFO] 🚀 Executing: python3 /Users/yauhenibudzko/Desktop/autocut/highlighter/HighlightFinder.py
+2026-02-19 14:08:06,051 [INFO]   [Output] /Users/yauhenibudzko/Desktop/autocut/highlighter/HighlightFinder.py:6: FutureWarning:
+2026-02-19 14:08:06,052 [INFO]   [Output] 
+2026-02-19 14:08:06,052 [INFO]   [Output] All support for the `google.generativeai` package has ended. It will no longer be receiving
+2026-02-19 14:08:06,052 [INFO]   [Output] updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
+2026-02-19 14:08:06,052 [INFO]   [Output] See README for more details:
+2026-02-19 14:08:06,052 [INFO]   [Output] 
+2026-02-19 14:08:06,052 [INFO]   [Output] https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
+2026-02-19 14:08:06,052 [INFO]   [Output] 
+2026-02-19 14:08:06,052 [INFO]   [Output] import google.generativeai as genai
+2026-02-19 14:08:06,055 [INFO]   [Output] 2026-02-19 14:08:06,054 [INFO] ============================================================
+2026-02-19 14:08:06,055 [INFO]   [Output] 2026-02-19 14:08:06,055 [INFO] 🚀 AI-Powered Viral Highlight Finder Starting
+2026-02-19 14:08:06,055 [INFO]   [Output] 2026-02-19 14:08:06,055 [INFO] ============================================================
+2026-02-19 14:08:06,056 [INFO]   [Output] 2026-02-19 14:08:06,056 [INFO] 🔍 Analyzing video: You’re Not Behind (Yet)： How to Learn AI in 19 Minutes [j0YENi6U0tE]_simple.json
+2026-02-19 14:08:06,059 [INFO]   [Output] 2026-02-19 14:08:06,059 [INFO] Sending transcript to Gemini (analyzing viral potential)...
+2026-02-19 14:08:36,315 [INFO]   [Output] 2026-02-19 14:08:36,313 [INFO] ✅ Found 8 viral moments!
+2026-02-19 14:08:36,316 [INFO]   [Output] 2026-02-19 14:08:36,313 [INFO] 💾 Highlights saved to /Users/yauhenibudzko/Desktop/autocut/highlights/You’re Not Behind (Yet)： How to Learn AI in 19 Minutes [j0YENi6U0tE]_simple_highlights.json
+2026-02-19 14:08:36,316 [INFO]   [Output] 
+2026-02-19 14:08:36,316 [INFO]   [Output] ========================================
+2026-02-19 14:08:36,316 [INFO]   [Output] 🎬 RECAP: POTENTIAL VIRAL HITS
+2026-02-19 14:08:36,316 [INFO]   [Output] ========================================
+2026-02-19 14:08:36,316 [INFO]   [Output] 1. [20.7s] Become AI Fluent in 3 Months!
+2026-02-19 14:08:36,316 [INFO]   [Output] Reason: Discover a 5-phase process to become proficient in AI in just three months. This clip highlights the...
+2026-02-19 14:08:36,316 [INFO]   [Output] 2. [22.0s] The #1 Habit to Master AI!
+2026-02-19 14:08:36,316 [INFO]   [Output] Reason: Learn the most transformative habit for maximizing value from AI: using your voice instead of typing...
+2026-02-19 14:08:36,316 [INFO]   [Output] 3. [20.8s] Ask AI to Interview You!
+2026-02-19 14:08:36,317 [INFO]   [Output] Reason: Uncover a powerful, underutilized AI prompt: ask AI to 'interview' you about your job. This techniqu...
+2026-02-19 14:08:36,317 [INFO]   [Output] 4. [27.3s] Don't Blindly Trust AI!
+2026-02-19 14:08:36,317 [INFO]   [Output] Reason: Understand AI's limitations by thinking of it as a smart but context-limited colleague. This clip wa...
+2026-02-19 14:08:36,317 [INFO]   [Output] 5. [33.8s] The 10/80/10 Rule for AI!
+2026-02-19 14:08:36,317 [INFO]   [Output] Reason: Master the 10/80/10 rule for delegating tasks to AI: you handle the initial 10% (context) and final ...
+2026-02-19 14:08:36,317 [INFO]   [Output] 6. [49.9s] Your 'Taste' is the Key to AI Success!
+2026-02-19 14:08:36,317 [INFO]   [Output] Reason: Discover why 'taste' and discernment are crucial for effective AI usage. This segment explains that ...
+2026-02-19 14:08:36,317 [INFO]   [Output] 7. [40.5s] Level Up Your AI Prompts (V1 to V2)!
+2026-02-19 14:08:36,317 [INFO]   [Output] Reason: Witness an example of iterative prompt engineering for Instagram hook ideas. Starting from a generic...
+2026-02-19 14:08:36,317 [INFO]   [Output] 8. [24.1s] Automate Your Meetings with AI!
+2026-02-19 14:08:36,317 [INFO]   [Output] Reason: Learn how to effortlessly automate meeting transcription, AI analysis, and summary delivery to Slack...
+2026-02-19 14:08:36,317 [INFO]   [Output] ========================================
+2026-02-19 14:08:36,317 [INFO]   [Output] 
+2026-02-19 14:08:38,399 [INFO] 🚀 Executing: python3 /Users/yauhenibudzko/Desktop/autocut/clipper/ClipGenerator.py
+2026-02-19 14:08:38,471 [INFO]   [Output] 2026-02-19 14:08:38,470 [INFO] ============================================================
+2026-02-19 14:08:38,471 [INFO]   [Output] 2026-02-19 14:08:38,470 [INFO] ✂️  Viral Clip Generator Starting
+2026-02-19 14:08:38,471 [INFO]   [Output] 2026-02-19 14:08:38,471 [INFO] ============================================================
+2026-02-19 14:08:38,471 [INFO]   [Output] 2026-02-19 14:08:38,471 [ERROR] Could not find source video for Mark Zuckerberg Showed Me Secret Future Tech [ecqavad2D30]_simple_highlights.json
+2026-02-19 14:08:38,471 [INFO]   [Output] 2026-02-19 14:08:38,471 [INFO] 🎞️  Processing 8 clips for: You’re Not Behind (Yet)： How to Learn AI in 19 Minutes [j0YENi6U0tE].mp4
+2026-02-19 14:08:40,009 [INFO]   [Output] 2026-02-19 14:08:40,008 [INFO] ✅ Created: clip_01.mp4
+2026-02-19 14:08:41,868 [INFO]   [Output] 2026-02-19 14:08:41,868 [INFO] ✅ Created: clip_02.mp4
+2026-02-19 14:08:43,405 [INFO]   [Output] 2026-02-19 14:08:43,405 [INFO] ✅ Created: clip_03.mp4
+2026-02-19 14:08:45,536 [INFO]   [Output] 2026-02-19 14:08:45,535 [INFO] ✅ Created: clip_04.mp4
+2026-02-19 14:08:48,059 [INFO]   [Output] 2026-02-19 14:08:48,059 [INFO] ✅ Created: clip_05.mp4
+2026-02-19 14:08:51,691 [INFO]   [Output] 2026-02-19 14:08:51,691 [INFO] ✅ Created: clip_06.mp4
+2026-02-19 14:08:54,475 [INFO]   [Output] 2026-02-19 14:08:54,474 [INFO] ✅ Created: clip_07.mp4
+2026-02-19 14:08:56,180 [INFO]   [Output] 2026-02-19 14:08:56,180 [INFO] ✅ Created: clip_08.mp4
+2026-02-19 14:08:56,180 [INFO]   [Output] 2026-02-19 14:08:56,180 [INFO] 🎬 All highlights processed successfully.
+2026-02-19 14:08:56,186 [INFO] 🚀 Executing: python3 /Users/yauhenibudzko/Desktop/autocut/editor/VideoEditor.py
+2026-02-19 14:08:56,236 [INFO]   [Output] 2026-02-19 14:08:56,236 [INFO] ============================================================
+2026-02-19 14:08:56,237 [INFO]   [Output] 2026-02-19 14:08:56,236 [INFO] 🎨 Viral Video Editor Starting
+2026-02-19 14:08:56,237 [INFO]   [Output] 2026-02-19 14:08:56,236 [INFO] 🔨 Using FFmpeg: ffmpeg
+2026-02-19 14:08:56,237 [INFO]   [Output] 2026-02-19 14:08:56,236 [INFO] ============================================================
+2026-02-19 14:08:56,237 [INFO]   [Output] 2026-02-19 14:08:56,237 [WARNING] ⏩ Skipping Mark Zuckerberg Showed Me Secret Future Tech [ecqavad2D30]_simple_highlights.json - Transcript missing for Mark Zuckerberg Showed Me Secret Future Tech [ecqavad2D30]
+2026-02-19 14:08:56,237 [INFO]   [Output] 2026-02-19 14:08:56,237 [INFO] 📦 Processing Video: You’re Not Behind (Yet)： How to Learn AI in 19 Minutes [j0YENi6U0tE]
+2026-02-19 14:08:56,241 [INFO]   [Output] 2026-02-19 14:08:56,241 [INFO] 🎬 Editing clip_01 (No BG found, falling back to blur)...
+2026-02-19 14:08:56,269 [INFO]   [Output] [AVFilterGraph @ 0xa06c0b980] No such filter: 'ass'
+2026-02-19 14:08:56,269 [INFO]   [Output] Error : Filter not found
+2026-02-19 14:08:56,270 [INFO]   [Output] 2026-02-19 14:08:56,270 [ERROR] ❌ Edit failed for clip_01: Command '['ffmpeg', '-hide_banner', '-loglevel', 'error', '-i', '/Users/yauhenibudzko/Desktop/autocut/clips/clip_01.mp4', '-filter_complex', "[0:v]scale=720:1440:force_original_aspect_ratio=decrease,pad=720:1280:(ow-iw)/2:(oh-ih)/2[main];[0:v]scale=720:1280:force_original_aspect_ratio=increase,crop=720:1280,boxblur=20:10[bg];[bg][main]overlay=0:0,ass=filename='/Users/yauhenibudzko/Desktop/autocut/edited_clips/clip_01.ass':fontsdir='/Users/yauhenibudzko/Desktop/autocut/editor/fonts'", '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '22', '-c:a', 'copy', '-movflags', '+faststart', '-y', '/Users/yauhenibudzko/Desktop/autocut/edited_clips/clip_01_viral.mp4']' returned non-zero exit status 8.
+2026-02-19 14:08:56,271 [INFO]   [Output] 2026-02-19 14:08:56,271 [INFO] 🎬 Editing clip_02 (No BG found, falling back to blur)...
+2026-02-19 14:08:56,298 [INFO]   [Output] [AVFilterGraph @ 0x719014000] No such filter: 'ass'
+2026-02-19 14:08:56,298 [INFO]   [Output] Error : Filter not found
+2026-02-19 14:08:56,298 [INFO]   [Output] 2026-02-19 14:08:56,298 [ERROR] ❌ Edit failed for clip_02: Command '['ffmpeg', '-hide_banner', '-loglevel', 'error', '-i', '/Users/yauhenibudzko/Desktop/autocut/clips/clip_02.mp4', '-filter_complex', "[0:v]scale=720:1440:force_original_aspect_ratio=decrease,pad=720:1280:(ow-iw)/2:(oh-ih)/2[main];[0:v]scale=720:1280:force_original_aspect_ratio=increase,crop=720:1280,boxblur=20:10[bg];[bg][main]overlay=0:0,ass=filename='/Users/yauhenibudzko/Desktop/autocut/edited_clips/clip_02.ass':fontsdir='/Users/yauhenibudzko/Desktop/autocut/editor/fonts'", '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '22', '-c:a', 'copy', '-movflags', '+faststart', '-y', '/Users/yauhenibudzko/Desktop/autocut/edited_clips/clip_02_viral.mp4']' returned non-zero exit status 8.
+2026-02-19 14:08:56,299 [INFO]   [Output] 2026-02-19 14:08:56,299 [INFO] 🎬 Editing clip_03 (No BG found, falling back to blur)...
+2026-02-19 14:08:56,324 [INFO]   [Output] [AVFilterGraph @ 0x748c28000] No such filter: 'ass'
+2026-02-19 14:08:56,324 [INFO]   [Output] Error : Filter not found
+2026-02-19 14:08:56,324 [INFO]   [Output] 2026-02-19 14:08:56,324 [ERROR] ❌ Edit failed for clip_03: Command '['ffmpeg', '-hide_banner', '-loglevel', 'error', '-i', '/Users/yauhenibudzko/Desktop/autocut/clips/clip_03.mp4', '-filter_complex', "[0:v]scale=720:1440:force_original_aspect_ratio=decrease,pad=720:1280:(ow-iw)/2:(oh-ih)/2[main];[0:v]scale=720:1280:force_original_aspect_ratio=increase,crop=720:1280,boxblur=20:10[bg];[bg][main]overlay=0:0,ass=filename='/Users/yauhenibudzko/Desktop/autocut/edited_clips/clip_03.ass':fontsdir='/Users/yauhenibudzko/Desktop/autocut/editor/fonts'", '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '22', '-c:a', 'copy', '-movflags', '+faststart', '-y', '/Users/yauhenibudzko/Desktop/autocut/edited_clips/clip_03_viral.mp4']' returned non-zero exit status 8.
+2026-02-19 14:08:56,325 [INFO]   [Output] 2026-02-19 14:08:56,325 [INFO] 🎬 Editing clip_04 (No BG found, falling back to blur)...
+2026-02-19 14:08:56,351 [INFO]   [Output] [AVFilterGraph @ 0x8fcc28000] No such filter: 'ass'
+2026-02-19 14:08:56,351 [INFO]   [Output] Error : Filter not found
+2026-02-19 14:08:56,351 [INFO]   [Output] 2026-02-19 14:08:56,351 [ERROR] ❌ Edit failed for clip_04: Command '['ffmpeg', '-hide_banner', '-loglevel', 'error', '-i', '/Users/yauhenibudzko/Desktop/autocut/clips/clip_04.mp4', '-filter_complex', "[0:v]scale=720:1440:force_original_aspect_ratio=decrease,pad=720:1280:(ow-iw)/2:(oh-ih)/2[main];[0:v]scale=720:1280:force_original_aspect_ratio=increase,crop=720:1280,boxblur=20:10[bg];[bg][main]overlay=0:0,ass=filename='/Users/yauhenibudzko/Desktop/autocut/edited_clips/clip_04.ass':fontsdir='/Users/yauhenibudzko/Desktop/autocut/editor/fonts'", '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '22', '-c:a', 'copy', '-movflags', '+faststart', '-y', '/Users/yauhenibudzko/Desktop/autocut/edited_clips/clip_04_viral.mp4']' returned non-zero exit status 8.
+2026-02-19 14:08:56,352 [INFO]   [Output] 2026-02-19 14:08:56,352 [INFO] 🎬 Editing clip_05 (No BG found, falling back to blur)...
+2026-02-19 14:08:56,375 [INFO]   [Output] [AVFilterGraph @ 0xb93014000] No such filter: 'ass'
+2026-02-19 14:08:56,375 [INFO]   [Output] Error : Filter not found
+2026-02-19 14:08:56,376 [INFO]   [Output] 2026-02-19 14:08:56,376 [ERROR] ❌ Edit failed for clip_05: Command '['ffmpeg', '-hide_banner', '-loglevel', 'error', '-i', '/Users/yauhenibudzko/Desktop/autocut/clips/clip_05.mp4', '-filter_complex', "[0:v]scale=720:1440:force_original_aspect_ratio=decrease,pad=720:1280:(ow-iw)/2:(oh-ih)/2[main];[0:v]scale=720:1280:force_original_aspect_ratio=increase,crop=720:1280,boxblur=20:10[bg];[bg][main]overlay=0:0,ass=filename='/Users/yauhenibudzko/Desktop/autocut/edited_clips/clip_05.ass':fontsdir='/Users/yauhenibudzko/Desktop/autocut/editor/fonts'", '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '22', '-c:a', 'copy', '-movflags', '+faststart', '-y', '/Users/yauhenibudzko/Desktop/autocut/edited_clips/clip_05_viral.mp4']' returned non-zero exit status 8.
+2026-02-19 14:08:56,377 [INFO]   [Output] 2026-02-19 14:08:56,377 [INFO] 🎬 Editing clip_06 (No BG found, falling back to blur)...
+2026-02-19 14:08:56,400 [INFO]   [Output] [AVFilterGraph @ 0xc22c0b980] No such filter: 'ass'
+2026-02-19 14:08:56,400 [INFO]   [Output] Error : Filter not found
+2026-02-19 14:08:56,401 [INFO]   [Output] 2026-02-19 14:08:56,401 [ERROR] ❌ Edit failed for clip_06: Command '['ffmpeg', '-hide_banner', '-loglevel', 'error', '-i', '/Users/yauhenibudzko/Desktop/autocut/clips/clip_06.mp4', '-filter_complex', "[0:v]scale=720:1440:force_original_aspect_ratio=decrease,pad=720:1280:(ow-iw)/2:(oh-ih)/2[main];[0:v]scale=720:1280:force_original_aspect_ratio=increase,crop=720:1280,boxblur=20:10[bg];[bg][main]overlay=0:0,ass=filename='/Users/yauhenibudzko/Desktop/autocut/edited_clips/clip_06.ass':fontsdir='/Users/yauhenibudzko/Desktop/autocut/editor/fonts'", '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '22', '-c:a', 'copy', '-movflags', '+faststart', '-y', '/Users/yauhenibudzko/Desktop/autocut/edited_clips/clip_06_viral.mp4']' returned non-zero exit status 8.
+2026-02-19 14:08:56,402 [INFO]   [Output] 2026-02-19 14:08:56,402 [INFO] 🎬 Editing clip_07 (No BG found, falling back to blur)...
+2026-02-19 14:08:56,425 [INFO]   [Output] [AVFilterGraph @ 0x72d014000] No such filter: 'ass'
+2026-02-19 14:08:56,425 [INFO]   [Output] Error : Filter not found
+2026-02-19 14:08:56,425 [INFO]   [Output] 2026-02-19 14:08:56,425 [ERROR] ❌ Edit failed for clip_07: Command '['ffmpeg', '-hide_banner', '-loglevel', 'error', '-i', '/Users/yauhenibudzko/Desktop/autocut/clips/clip_07.mp4', '-filter_complex', "[0:v]scale=720:1440:force_original_aspect_ratio=decrease,pad=720:1280:(ow-iw)/2:(oh-ih)/2[main];[0:v]scale=720:1280:force_original_aspect_ratio=increase,crop=720:1280,boxblur=20:10[bg];[bg][main]overlay=0:0,ass=filename='/Users/yauhenibudzko/Desktop/autocut/edited_clips/clip_07.ass':fontsdir='/Users/yauhenibudzko/Desktop/autocut/editor/fonts'", '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '22', '-c:a', 'copy', '-movflags', '+faststart', '-y', '/Users/yauhenibudzko/Desktop/autocut/edited_clips/clip_07_viral.mp4']' returned non-zero exit status 8.
+2026-02-19 14:08:56,426 [INFO]   [Output] 2026-02-19 14:08:56,426 [INFO] 🎬 Editing clip_08 (No BG found, falling back to blur)...
+2026-02-19 14:08:56,449 [INFO]   [Output] [AVFilterGraph @ 0x8f7018000] No such filter: 'ass'
+2026-02-19 14:08:56,449 [INFO]   [Output] Error : Filter not found
+2026-02-19 14:08:56,450 [INFO]   [Output] 2026-02-19 14:08:56,450 [ERROR] ❌ Edit failed for clip_08: Command '['ffmpeg', '-hide_banner', '-loglevel', 'error', '-i', '/Users/yauhenibudzko/Desktop/autocut/clips/clip_08.mp4', '-filter_complex', "[0:v]scale=720:1440:force_original_aspect_ratio=decrease,pad=720:1280:(ow-iw)/2:(oh-ih)/2[main];[0:v]scale=720:1280:force_original_aspect_ratio=increase,crop=720:1280,boxblur=20:10[bg];[bg][main]overlay=0:0,ass=filename='/Users/yauhenibudzko/Desktop/autocut/edited_clips/clip_08.ass':fontsdir='/Users/yauhenibudzko/Desktop/autocut/editor/fonts'", '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '22', '-c:a', 'copy', '-movflags', '+faststart', '-y', '/Users/yauhenibudzko/Desktop/autocut/edited_clips/clip_08_viral.mp4']' returned non-zero exit status 8.
+2026-02-19 14:08:56,450 [INFO]   [Output] 2026-02-19 14:08:56,450 [INFO] 🧹 Starting cleanup for: You’re Not Behind (Yet)： How to Learn AI in 19 Minutes [j0YENi6U0tE]
+2026-02-19 14:08:56,455 [INFO]   [Output] 2026-02-19 14:08:56,454 [INFO] Removed download: You’re Not Behind (Yet)： How to Learn AI in 19 Minutes [j0YENi6U0tE].mp4
+2026-02-19 14:08:56,455 [INFO]   [Output] 2026-02-19 14:08:56,455 [INFO] Removed full transcript: You’re Not Behind (Yet)： How to Learn AI in 19 Minutes [j0YENi6U0tE].json
+2026-02-19 14:08:56,455 [INFO]   [Output] 2026-02-19 14:08:56,455 [INFO] Removed simple transcript: You’re Not Behind (Yet)： How to Learn AI in 19 Minutes [j0YENi6U0tE]_simple.json
+2026-02-19 14:08:56,456 [INFO]   [Output] 2026-02-19 14:08:56,456 [INFO] Removed raw clip: clip_06.mp4
+2026-02-19 14:08:56,456 [INFO]   [Output] 2026-02-19 14:08:56,456 [INFO] Removed raw clip: clip_07.mp4
+2026-02-19 14:08:56,456 [INFO]   [Output] 2026-02-19 14:08:56,456 [INFO] Removed raw clip: clip_05.mp4
+2026-02-19 14:08:56,456 [INFO]   [Output] 2026-02-19 14:08:56,456 [INFO] Removed raw clip: clip_04.mp4
+2026-02-19 14:08:56,456 [INFO]   [Output] 2026-02-19 14:08:56,456 [INFO] Removed raw clip: clip_01.mp4
+2026-02-19 14:08:56,456 [INFO]   [Output] 2026-02-19 14:08:56,456 [INFO] Removed raw clip: clip_03.mp4
+2026-02-19 14:08:56,456 [INFO]   [Output] 2026-02-19 14:08:56,456 [INFO] Removed raw clip: clip_02.mp4
+2026-02-19 14:08:56,456 [INFO]   [Output] 2026-02-19 14:08:56,456 [INFO] Removed raw clip: clip_08.mp4
+2026-02-19 14:08:56,456 [INFO]   [Output] 2026-02-19 14:08:56,456 [INFO] ✅ Editor Process Complete.
+2026-02-19 14:08:56,461 [INFO] 🚀 Executing: python3 /Users/yauhenibudzko/Desktop/autocut/uploader/uploader.py
+2026-02-19 14:08:57,062 [INFO]   [Output] 2026-02-19 14:08:57,062 - ERROR - /Users/yauhenibudzko/Desktop/autocut/uploader/client_secrets.json not found. Please provide it to authenticate.
+2026-02-19 14:08:57,063 [INFO]   [Output] 2026-02-19 14:08:57,062 - ERROR - Failed to authenticate with YouTube. Exiting.
+2026-02-19 14:08:57,090 [INFO] 🎯 Workflow completed successfully. one full video processed and uploaded.
+2026-02-19 14:29:23,207 [INFO] ============================================================
+2026-02-19 14:29:23,208 [INFO] 🤖 Master Workflow Runner Starting
+2026-02-19 14:29:23,208 [INFO] ============================================================
+2026-02-19 14:29:23,398 [INFO] ⚙️ Starting full pipeline (Download -> Transcribe -> Highlight -> Clip -> Edit -> Upload)...
+2026-02-19 14:29:23,398 [INFO] 🚀 Executing: python3 /Users/yauhenibudzko/Desktop/autocut/downloader/Downloader.py
+2026-02-19 14:29:24,007 [INFO]   [Output] 2026-02-19 14:29:24,006 [INFO] 🎬 Starting download: https://www.youtube.com/watch?v=sDZVbfN07tg
+2026-02-19 14:29:24,090 [INFO]   [Output] [youtube] Extracting URL: https://www.youtube.com/watch?v=sDZVbfN07tg
+2026-02-19 14:29:24,090 [INFO]   [Output] [youtube] sDZVbfN07tg: Downloading webpage
+2026-02-19 14:29:25,132 [INFO]   [Output] [youtube] sDZVbfN07tg: Downloading android player API JSON
+2026-02-19 14:29:25,287 [INFO]   [Output] WARNING: [youtube] sDZVbfN07tg: android client https formats require a GVS PO Token which was not provided. They will be skipped as they may yield HTTP Error 403. You can manually pass a GVS PO Token for this client with --extractor-args "youtube:po_token=android.gvs+XXX". For more information, refer to  https://github.com/yt-dlp/yt-dlp/wiki/PO-Token-Guide
+2026-02-19 14:29:25,383 [INFO]   [Output] [info] sDZVbfN07tg: Downloading 1 format(s): 18
+2026-02-19 14:29:25,470 [INFO]   [Output] [download] Destination: /Users/yauhenibudzko/Desktop/autocut/downloads/Your Doctor's Least Favorite TikToks [sDZVbfN07tg].mp4
+2026-02-19 14:29:25,470 [INFO]   [Output] 
+2026-02-19 14:29:25,471 [INFO]   [Output] [download]   0.0% of   63.35MiB at  Unknown B/s ETA Unknown
+2026-02-19 14:29:25,471 [INFO]   [Output] [download]   0.0% of   63.35MiB at    2.23MiB/s ETA 00:28
+2026-02-19 14:29:25,471 [INFO]   [Output] [download]   0.0% of   63.35MiB at    4.25MiB/s ETA 00:14
+2026-02-19 14:29:25,476 [INFO]   [Output] [download]   0.0% of   63.35MiB at    7.99MiB/s ETA 00:07
+2026-02-19 14:29:25,480 [INFO]   [Output] [download]   0.0% of   63.35MiB at    4.54MiB/s ETA 00:13
+2026-02-19 14:29:25,487 [INFO]   [Output] [download]   0.1% of   63.35MiB at    5.84MiB/s ETA 00:10
+2026-02-19 14:29:25,494 [INFO]   [Output] [download]   0.2% of   63.35MiB at    7.14MiB/s ETA 00:08
+2026-02-19 14:29:25,510 [INFO]   [Output] [download]   0.4% of   63.35MiB at   10.06MiB/s ETA 00:06
+2026-02-19 14:29:25,536 [INFO]   [Output] [download]   0.8% of   63.35MiB at   12.23MiB/s ETA 00:05
+2026-02-19 14:29:25,606 [INFO]   [Output] [download]   1.6% of   63.35MiB at   14.90MiB/s ETA 00:04
+2026-02-19 14:29:25,707 [INFO]   [Output] [download]   3.2% of   63.35MiB at   14.66MiB/s ETA 00:04
+2026-02-19 14:29:25,976 [INFO]   [Output] [download]   6.3% of   63.35MiB at   16.82MiB/s ETA 00:03
+2026-02-19 14:29:26,053 [INFO]   [Output] [download]  12.6% of   63.35MiB at   15.80MiB/s ETA 00:03
+2026-02-19 14:29:26,091 [INFO]   [Output] [download]  15.4% of   63.35MiB at   16.74MiB/s ETA 00:03
+2026-02-19 14:29:26,092 [INFO]   [Output] [download]  15.4% of   63.35MiB at  313.87KiB/s ETA 02:55
+2026-02-19 14:29:26,092 [INFO]   [Output] [download]  15.4% of   63.35MiB at  819.47KiB/s ETA 01:07
+2026-02-19 14:29:26,092 [INFO]   [Output] [download]  15.4% of   63.35MiB at    1.72MiB/s ETA 00:31
+2026-02-19 14:29:26,096 [INFO]   [Output] [download]  15.4% of   63.35MiB at    3.40MiB/s ETA 00:15
+2026-02-19 14:29:26,101 [INFO]   [Output] [download]  15.5% of   63.35MiB at    3.98MiB/s ETA 00:13
+2026-02-19 14:29:26,105 [INFO]   [Output] [download]  15.5% of   63.35MiB at    4.93MiB/s ETA 00:10
+2026-02-19 14:29:26,115 [INFO]   [Output] [download]  15.6% of   63.35MiB at    7.34MiB/s ETA 00:07
+2026-02-19 14:29:26,129 [INFO]   [Output] [download]  15.8% of   63.35MiB at    9.25MiB/s ETA 00:05
+2026-02-19 14:29:26,149 [INFO]   [Output] [download]  16.2% of   63.35MiB at   12.11MiB/s ETA 00:04
+2026-02-19 14:29:26,191 [INFO]   [Output] [download]  17.0% of   63.35MiB at   16.55MiB/s ETA 00:03
+2026-02-19 14:29:26,271 [INFO]   [Output] [download]  18.6% of   63.35MiB at   19.54MiB/s ETA 00:02
+2026-02-19 14:29:26,486 [INFO]   [Output] [download]  21.7% of   63.35MiB at   21.83MiB/s ETA 00:02
+2026-02-19 14:29:26,562 [INFO]   [Output] [download]  28.0% of   63.35MiB at   20.11MiB/s ETA 00:02
+2026-02-19 14:29:26,604 [INFO]   [Output] [download]  30.9% of   63.35MiB at   20.68MiB/s ETA 00:02
+2026-02-19 14:29:26,604 [INFO]   [Output] [download]  30.9% of   63.35MiB at  Unknown B/s ETA Unknown
+2026-02-19 14:29:26,604 [INFO]   [Output] [download]  30.9% of   63.35MiB at  Unknown B/s ETA Unknown
+2026-02-19 14:29:26,605 [INFO]   [Output] [download]  30.9% of   63.35MiB at    6.70MiB/s ETA 00:06
+2026-02-19 14:29:26,609 [INFO]   [Output] [download]  30.9% of   63.35MiB at    9.85MiB/s ETA 00:04
+2026-02-19 14:29:26,613 [INFO]   [Output] [download]  30.9% of   63.35MiB at    5.50MiB/s ETA 00:07
+2026-02-19 14:29:26,623 [INFO]   [Output] [download]  31.0% of   63.35MiB at    6.32MiB/s ETA 00:06
+2026-02-19 14:29:26,632 [INFO]   [Output] [download]  31.1% of   63.35MiB at    6.30MiB/s ETA 00:06
+2026-02-19 14:29:26,646 [INFO]   [Output] [download]  31.3% of   63.35MiB at    8.52MiB/s ETA 00:05
+2026-02-19 14:29:26,665 [INFO]   [Output] [download]  31.7% of   63.35MiB at   11.66MiB/s ETA 00:03
+2026-02-19 14:29:26,707 [INFO]   [Output] [download]  32.4% of   63.35MiB at   16.22MiB/s ETA 00:02
+2026-02-19 14:29:26,790 [INFO]   [Output] [download]  34.0% of   63.35MiB at   19.29MiB/s ETA 00:02
+2026-02-19 14:29:27,070 [INFO]   [Output] [download]  37.2% of   63.35MiB at   21.43MiB/s ETA 00:01
+2026-02-19 14:29:27,164 [INFO]   [Output] [download]  43.5% of   63.35MiB at   17.12MiB/s ETA 00:02
+2026-02-19 14:29:27,221 [INFO]   [Output] [download]  46.5% of   63.35MiB at   17.70MiB/s ETA 00:01
+2026-02-19 14:29:27,221 [INFO]   [Output] [download]  46.5% of   63.35MiB at  Unknown B/s ETA Unknown
+2026-02-19 14:29:27,222 [INFO]   [Output] [download]  46.5% of   63.35MiB at    2.02MiB/s ETA 00:16
+2026-02-19 14:29:27,223 [INFO]   [Output] [download]  46.5% of   63.35MiB at    3.37MiB/s ETA 00:10
+2026-02-19 14:29:27,224 [INFO]   [Output] [download]  46.5% of   63.35MiB at    5.10MiB/s ETA 00:06
+2026-02-19 14:29:27,229 [INFO]   [Output] [download]  46.5% of   63.35MiB at    7.78MiB/s ETA 00:04
+2026-02-19 14:29:27,232 [INFO]   [Output] [download]  46.6% of   63.35MiB at    6.30MiB/s ETA 00:05
+2026-02-19 14:29:27,241 [INFO]   [Output] [download]  46.7% of   63.35MiB at    9.98MiB/s ETA 00:03
+2026-02-19 14:29:27,256 [INFO]   [Output] [download]  46.9% of   63.35MiB at   11.54MiB/s ETA 00:02
+2026-02-19 14:29:27,339 [INFO]   [Output] [download]  47.3% of   63.35MiB at   13.64MiB/s ETA 00:02
+2026-02-19 14:29:27,395 [INFO]   [Output] [download]  48.0% of   63.35MiB at    8.46MiB/s ETA 00:03
+2026-02-19 14:29:27,491 [INFO]   [Output] [download]  49.6% of   63.35MiB at   11.41MiB/s ETA 00:02
+2026-02-19 14:29:27,919 [INFO]   [Output] [download]  52.8% of   63.35MiB at   14.71MiB/s ETA 00:02
+2026-02-19 14:29:28,349 [INFO]   [Output] [download]  59.1% of   63.35MiB at   11.45MiB/s ETA 00:02
+2026-02-19 14:29:28,381 [INFO]   [Output] [download]  62.0% of   63.35MiB at    8.73MiB/s ETA 00:02
+2026-02-19 14:29:28,381 [INFO]   [Output] [download]  62.0% of   63.35MiB at  998.17KiB/s ETA 00:24
+2026-02-19 14:29:28,382 [INFO]   [Output] [download]  62.0% of   63.35MiB at    1.89MiB/s ETA 00:12
+2026-02-19 14:29:28,382 [INFO]   [Output] [download]  62.0% of   63.35MiB at    3.56MiB/s ETA 00:06
+2026-02-19 14:29:28,386 [INFO]   [Output] [download]  62.1% of   63.35MiB at    6.35MiB/s ETA 00:03
+2026-02-19 14:29:28,390 [INFO]   [Output] [download]  62.1% of   63.35MiB at    4.97MiB/s ETA 00:04
+2026-02-19 14:29:28,397 [INFO]   [Output] [download]  62.1% of   63.35MiB at    6.25MiB/s ETA 00:03
+2026-02-19 14:29:28,406 [INFO]   [Output] [download]  62.2% of   63.35MiB at    7.21MiB/s ETA 00:03
+2026-02-19 14:29:28,418 [INFO]   [Output] [download]  62.4% of   63.35MiB at    9.58MiB/s ETA 00:02
+2026-02-19 14:29:28,444 [INFO]   [Output] [download]  62.8% of   63.35MiB at   12.98MiB/s ETA 00:01
+2026-02-19 14:29:28,489 [INFO]   [Output] [download]  63.6% of   63.35MiB at   15.64MiB/s ETA 00:01
+2026-02-19 14:29:28,579 [INFO]   [Output] [download]  65.2% of   63.35MiB at   18.27MiB/s ETA 00:01
+2026-02-19 14:29:28,759 [INFO]   [Output] [download]  68.3% of   63.35MiB at   20.10MiB/s ETA 00:00
+2026-02-19 14:29:28,830 [INFO]   [Output] [download]  74.7% of   63.35MiB at   21.13MiB/s ETA 00:00
+2026-02-19 14:29:28,861 [INFO]   [Output] [download]  77.3% of   63.35MiB at   21.49MiB/s ETA 00:00
+2026-02-19 14:29:28,862 [INFO]   [Output] [download]  77.3% of   63.35MiB at  Unknown B/s ETA Unknown
+2026-02-19 14:29:28,862 [INFO]   [Output] [download]  77.3% of   63.35MiB at    2.60MiB/s ETA 00:05
+2026-02-19 14:29:28,862 [INFO]   [Output] [download]  77.3% of   63.35MiB at    5.03MiB/s ETA 00:02
+2026-02-19 14:29:28,866 [INFO]   [Output] [download]  77.3% of   63.35MiB at    9.35MiB/s ETA 00:01
+2026-02-19 14:29:28,868 [INFO]   [Output] [download]  77.4% of   63.35MiB at    5.88MiB/s ETA 00:02
+2026-02-19 14:29:28,875 [INFO]   [Output] [download]  77.4% of   63.35MiB at    7.77MiB/s ETA 00:01
+2026-02-19 14:29:28,882 [INFO]   [Output] [download]  77.5% of   63.35MiB at    8.80MiB/s ETA 00:01
+2026-02-19 14:29:28,893 [INFO]   [Output] [download]  77.7% of   63.35MiB at   11.49MiB/s ETA 00:01
+2026-02-19 14:29:28,920 [INFO]   [Output] [download]  78.1% of   63.35MiB at   15.26MiB/s ETA 00:00
+2026-02-19 14:29:28,967 [INFO]   [Output] [download]  78.9% of   63.35MiB at   16.89MiB/s ETA 00:00
+2026-02-19 14:29:29,060 [INFO]   [Output] [download]  80.5% of   63.35MiB at   18.82MiB/s ETA 00:00
+2026-02-19 14:29:29,586 [INFO]   [Output] [download]  83.6% of   63.35MiB at   20.07MiB/s ETA 00:00
+2026-02-19 14:29:30,006 [INFO]   [Output] [download]  89.9% of   63.35MiB at   11.04MiB/s ETA 00:00
+2026-02-19 14:29:30,042 [INFO]   [Output] [download]  92.4% of   63.35MiB at    8.32MiB/s ETA 00:00
+2026-02-19 14:29:30,042 [INFO]   [Output] [download]  92.4% of   63.35MiB at  Unknown B/s ETA Unknown
+2026-02-19 14:29:30,042 [INFO]   [Output] [download]  92.4% of   63.35MiB at  Unknown B/s ETA 00:01
+2026-02-19 14:29:30,043 [INFO]   [Output] [download]  92.4% of   63.35MiB at    5.20MiB/s ETA 00:00
+2026-02-19 14:29:30,047 [INFO]   [Output] [download]  92.4% of   63.35MiB at    8.91MiB/s ETA 00:00
+2026-02-19 14:29:30,053 [INFO]   [Output] [download]  92.4% of   63.35MiB at    5.05MiB/s ETA 00:00
+2026-02-19 14:29:30,056 [INFO]   [Output] [download]  92.5% of   63.35MiB at    5.23MiB/s ETA 00:00
+2026-02-19 14:29:30,066 [INFO]   [Output] [download]  92.5% of   63.35MiB at    8.09MiB/s ETA 00:00
+2026-02-19 14:29:30,079 [INFO]   [Output] [download]  92.7% of   63.35MiB at   10.05MiB/s ETA 00:00
+2026-02-19 14:29:30,103 [INFO]   [Output] [download]  93.1% of   63.35MiB at   13.28MiB/s ETA 00:00
+2026-02-19 14:29:30,151 [INFO]   [Output] [download]  93.9% of   63.35MiB at   16.26MiB/s ETA 00:00
+2026-02-19 14:29:30,245 [INFO]   [Output] [download]  95.5% of   63.35MiB at   18.16MiB/s ETA 00:00
+2026-02-19 14:29:30,290 [INFO]   [Output] [download]  98.7% of   63.35MiB at   19.61MiB/s ETA 00:00
+2026-02-19 14:29:30,296 [INFO]   [Output] [download] 100.0% of   63.35MiB at   19.45MiB/s ETA 00:00
+2026-02-19 14:29:30,297 [INFO]   [Output] [download] 100% of   63.35MiB in 00:00:04 at 12.90MiB/s  2026-02-19 14:29:30,297 [INFO] ✅ Finished downloading: /Users/yauhenibudzko/Desktop/autocut/downloads/Your Doctor's Least Favorite TikToks [sDZVbfN07tg].mp4
+2026-02-19 14:29:30,357 [INFO]   [Output] 
+2026-02-19 14:29:30,362 [INFO]   [Output] [VideoConvertor] Not converting media file "/Users/yauhenibudzko/Desktop/autocut/downloads/Your Doctor's Least Favorite TikToks [sDZVbfN07tg].mp4"; already is in target format mp4
+2026-02-19 14:29:30,418 [INFO] 🚀 Executing: python3 /Users/yauhenibudzko/Desktop/autocut/transcriber/Transcriber.py
+2026-02-19 14:29:32,381 [INFO]   [Output] 2026-02-19 14:29:32,381 [INFO] Loading Faster-Whisper model: small
+2026-02-19 14:29:32,825 [INFO]   [Output] 2026-02-19 14:29:32,824 [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
+2026-02-19 14:29:33,760 [INFO]   [Output] 2026-02-19 14:29:33,760 [INFO] Starting Transcriber Service
+2026-02-19 14:29:33,761 [INFO]   [Output] 2026-02-19 14:29:33,760 [INFO] Extracting audio from Your Doctor's Least Favorite TikToks [sDZVbfN07tg].mp4...
+2026-02-19 14:29:34,613 [INFO]   [Output] 2026-02-19 14:29:34,613 [INFO] Transcribing Your Doctor's Least Favorite TikToks [sDZVbfN07tg].mp4...
+2026-02-19 14:29:34,741 [INFO]   [Output] 2026-02-19 14:29:34,741 [INFO] Processing audio with duration 17:33.954
+2026-02-19 14:29:35,509 [INFO]   [Output] 2026-02-19 14:29:35,508 [INFO] Transcription language: en (1.00)
+2026-02-19 14:34:14,210 [INFO]   [Output] 2026-02-19 14:34:14,209 [INFO] Transcription finished in 279.60s
+2026-02-19 14:34:14,232 [INFO]   [Output] 2026-02-19 14:34:14,232 [INFO] Saved: Your Doctor's Least Favorite TikToks [sDZVbfN07tg].json
+2026-02-19 14:34:14,247 [INFO]   [Output] 2026-02-19 14:34:14,247 [INFO] Saved: Your Doctor's Least Favorite TikToks [sDZVbfN07tg]_simple.json
+2026-02-19 14:34:14,251 [INFO]   [Output] 2026-02-19 14:34:14,251 [INFO] Transcriber Process Complete
+2026-02-19 14:34:14,368 [INFO] 🚀 Executing: python3 /Users/yauhenibudzko/Desktop/autocut/highlighter/HighlightFinder.py
+2026-02-19 14:34:15,440 [INFO]   [Output] /Users/yauhenibudzko/Desktop/autocut/highlighter/HighlightFinder.py:6: FutureWarning:
+2026-02-19 14:34:15,440 [INFO]   [Output] 
+2026-02-19 14:34:15,441 [INFO]   [Output] All support for the `google.generativeai` package has ended. It will no longer be receiving
+2026-02-19 14:34:15,441 [INFO]   [Output] updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
+2026-02-19 14:34:15,441 [INFO]   [Output] See README for more details:
+2026-02-19 14:34:15,441 [INFO]   [Output] 
+2026-02-19 14:34:15,441 [INFO]   [Output] https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
+2026-02-19 14:34:15,441 [INFO]   [Output] 
+2026-02-19 14:34:15,441 [INFO]   [Output] import google.generativeai as genai
+2026-02-19 14:34:15,444 [INFO]   [Output] 2026-02-19 14:34:15,444 [INFO] ============================================================
+2026-02-19 14:34:15,444 [INFO]   [Output] 2026-02-19 14:34:15,444 [INFO] 🚀 AI-Powered Viral Highlight Finder Starting
+2026-02-19 14:34:15,444 [INFO]   [Output] 2026-02-19 14:34:15,444 [INFO] ============================================================
+2026-02-19 14:34:15,445 [INFO]   [Output] 2026-02-19 14:34:15,445 [INFO] 🔍 Analyzing video: Your Doctor's Least Favorite TikToks [sDZVbfN07tg]_simple.json
+2026-02-19 14:34:15,446 [INFO]   [Output] 2026-02-19 14:34:15,446 [INFO] Sending transcript to Gemini (analyzing viral potential)...
+2026-02-19 14:34:15,661 [INFO]   [Output] 2026-02-19 14:34:15,661 [ERROR] AI Highlight detection failed for Your Doctor's Least Favorite TikToks [sDZVbfN07tg]_simple.json: 403 Your API key was reported as leaked. Please use another API key.
+2026-02-19 14:34:15,661 [INFO]   [Output] 2026-02-19 14:34:15,661 [WARNING] ❌ No viral highlights identified for Your Doctor's Least Favorite TikToks [sDZVbfN07tg]_simple.json
+2026-02-19 14:34:17,744 [INFO] 🚀 Executing: python3 /Users/yauhenibudzko/Desktop/autocut/clipper/ClipGenerator.py
+2026-02-19 14:34:17,805 [INFO]   [Output] 2026-02-19 14:34:17,804 [INFO] ============================================================
+2026-02-19 14:34:17,805 [INFO]   [Output] 2026-02-19 14:34:17,805 [INFO] ✂️  Viral Clip Generator Starting
+2026-02-19 14:34:17,805 [INFO]   [Output] 2026-02-19 14:34:17,805 [INFO] ============================================================
+2026-02-19 14:34:17,805 [INFO]   [Output] 2026-02-19 14:34:17,805 [ERROR] Could not find source video for Mark Zuckerberg Showed Me Secret Future Tech [ecqavad2D30]_simple_highlights.json
+2026-02-19 14:34:17,805 [INFO]   [Output] 2026-02-19 14:34:17,805 [ERROR] Could not find source video for You’re Not Behind (Yet)： How to Learn AI in 19 Minutes [j0YENi6U0tE]_simple_highlights.json
+2026-02-19 14:34:17,806 [INFO]   [Output] 2026-02-19 14:34:17,805 [INFO] 🎬 All highlights processed successfully.
+2026-02-19 14:34:17,810 [INFO] 🚀 Executing: python3 /Users/yauhenibudzko/Desktop/autocut/editor/VideoEditor.py
+2026-02-19 14:34:17,847 [INFO]   [Output] 2026-02-19 14:34:17,847 [INFO] ============================================================
+2026-02-19 14:34:17,847 [INFO]   [Output] 2026-02-19 14:34:17,847 [INFO] 🎨 Viral Video Editor Starting
+2026-02-19 14:34:17,848 [INFO]   [Output] 2026-02-19 14:34:17,847 [INFO] 🔨 Using FFmpeg: ffmpeg
+2026-02-19 14:34:17,848 [INFO]   [Output] 2026-02-19 14:34:17,847 [INFO] ============================================================
+2026-02-19 14:34:17,848 [INFO]   [Output] 2026-02-19 14:34:17,847 [WARNING] ⏩ Skipping Mark Zuckerberg Showed Me Secret Future Tech [ecqavad2D30]_simple_highlights.json - Transcript missing for Mark Zuckerberg Showed Me Secret Future Tech [ecqavad2D30]
+2026-02-19 14:34:17,848 [INFO]   [Output] 2026-02-19 14:34:17,847 [WARNING] ⏩ Skipping You’re Not Behind (Yet)： How to Learn AI in 19 Minutes [j0YENi6U0tE]_simple_highlights.json - Transcript missing for You’re Not Behind (Yet)： How to Learn AI in 19 Minutes [j0YENi6U0tE]
+2026-02-19 14:34:17,848 [INFO]   [Output] 2026-02-19 14:34:17,847 [INFO] 📭 No videos were eligible for editing.
+2026-02-19 14:34:17,851 [INFO] 🚀 Executing: python3 /Users/yauhenibudzko/Desktop/autocut/uploader/uploader.py
+2026-02-19 14:34:18,278 [INFO]   [Output] 2026-02-19 14:34:18,278 - ERROR - /Users/yauhenibudzko/Desktop/autocut/uploader/client_secrets.json not found. Please provide it to authenticate.
+2026-02-19 14:34:18,279 [INFO]   [Output] 2026-02-19 14:34:18,278 - ERROR - Failed to authenticate with YouTube. Exiting.
+2026-02-19 14:34:18,307 [INFO] 🎯 Workflow completed successfully. one full video processed and uploaded.

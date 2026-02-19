@@ -159,8 +159,10 @@ def apply_pro_edits(clip_path, highlights, full_transcript):
     try:
         subprocess.run(cmd, check=True)
         logger.info(f"✨ Edited: {output_path.name}")
+        return True
     except subprocess.CalledProcessError as e:
-        logger.error(f"❌ Edit failed for {clip_name}: {e}")
+        logger.error(f"❌ Edit failed for clip {clip_name}: {e}")
+        return False
     finally:
         if ass_path.exists():
             ass_path.unlink()
@@ -203,7 +205,9 @@ def main():
         logger.info("No highlights found.")
         return
         
+    global_success = True
     processed_any = False
+    
     for h_file in h_files:
         video_stem = h_file.stem.replace("_simple_highlights", "").replace("_highlights", "")
         t_file = Path(TRANSCRIPTS_DIR) / f"{video_stem}_simple.json"
@@ -225,16 +229,27 @@ def main():
 
         clips.sort(key=lambda x: int(re.search(r"(\d+)", x.name).group(1)))
 
+        video_success = True
         for clip in clips:
-            apply_pro_edits(clip, highlights, transcript)
+            if not apply_pro_edits(clip, highlights, transcript):
+                video_success = False
+                global_success = False
 
-        cleanup(h_file)
-        processed_any = True
+        if video_success:
+            cleanup(h_file)
+            processed_any = True
+        else:
+            logger.error(f"❌ Skipping cleanup for {video_stem} due to edit failures.")
 
+    if not processed_any and not global_success:
+        logger.error("💀 Editor failed to process any videos successfully.")
+        sys.exit(1)
+    
     if processed_any:
         logger.info("✅ Editor Process Complete.")
     else:
         logger.info("📭 No videos were eligible for editing.")
 
 if __name__ == "__main__":
+    import sys
     main()

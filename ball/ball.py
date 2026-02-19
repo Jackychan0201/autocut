@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 from matplotlib.patches import Arc, Circle
+import logging
 
 # ======================
 # CONFIGURATION
@@ -15,25 +16,19 @@ cur_restitution = BASE_RESTITUTION
 TANGENTIAL_KICK = 0.6
 SUBSTEPS = 3
 
-MAX_SPEED = 7.0
-MIN_SPEED = 3.0
+MAX_SPEED_BASE = 5.6
+MIN_SPEED_BASE = 2.4
+MAX_SPEED = MAX_SPEED_BASE
+MIN_SPEED = MIN_SPEED_BASE
 DAMPING = 0.001
 MIN_RESTITUTION = 1.1
 
-# Vivid color palette
-VIVID_COLORS = [
-    "lime", "cyan", "magenta", "yellow", "orange", 
-    "red", "deepskyblue", "springgreen", "fuchsia", "gold"
-]
 
 # ======================
-# SIMULATION TARGETS
+# SIMULATION SETTINGS
 # ======================
-TARGET_SIM_LENGTH = 50  # Desired duration in seconds
-# With RESTITUTION 1.6, the ball clears rings much faster. Increasing ring density.
-NUM_RINGS = max(10, int(TARGET_SIM_LENGTH * 0.7))
-# Larger radius as requested
-BALL_RADIUS = np.clip(0.15 - (TARGET_SIM_LENGTH * 0.001), 0.04, 0.06)
+NUM_RINGS = 30
+BALL_RADIUS = 0.05
 
 # Vivid color palette
 VIVID_COLORS = [
@@ -44,12 +39,16 @@ VIVID_COLORS = [
 INNER_RADIUS = 0.4
 RADIUS_STEP = 1.6 / max(NUM_RINGS, 1) # Adjust step to fit max radius (~2.0)
 GAP_SIZE = np.pi / 5  # Made gaps smaller (pi/5 -> pi/7)
-BASE_ROT_SPEED = 2.2  # Faster rotation to make it harder (0.8 -> 1.5)
+BASE_ROT_SPEED = 3.2  # Increased speed for higher difficulty
 
-BALL_COLOR = np.random.choice(VIVID_COLORS)
-RING_COLOR = np.random.choice(VIVID_COLORS)
-while RING_COLOR == BALL_COLOR:
-    RING_COLOR = np.random.choice(VIVID_COLORS)
+def get_contrast_colors():
+    """Pick two highly contrasting colors from the vivid palette."""
+    c1 = np.random.choice(VIVID_COLORS)
+    # Filter out colors that might be too similar (simplified for now by just picking a different one)
+    c2 = np.random.choice([c for c in VIVID_COLORS if c != c1])
+    return c1, c2
+
+BALL_COLOR, RING_COLOR = get_contrast_colors()
 
 # Timing state
 elapsed_time = 0.0
@@ -70,7 +69,7 @@ ax.axis("off")
 # BALL
 # ======================
 ball_pos = np.array([0.0, 0.0])
-ball_vel = np.array([1.5, 0.0])
+ball_vel = np.array([1.2, 0.0])
 
 ball = Circle(ball_pos, BALL_RADIUS, color=BALL_COLOR)
 ax.add_patch(ball)
@@ -92,12 +91,11 @@ timer_text = ax.text(
 # RINGS
 # ======================
 rings = []
-base_gap_angle = np.pi / 2
+shared_gap_angle = np.random.uniform(0, 2 * np.pi)
 
 for i in range(NUM_RINGS):
     r = INNER_RADIUS + i * RADIUS_STEP
-    bias = np.random.uniform(-0.15,0.15)
-    gap_angle = base_gap_angle + bias
+    gap_angle = shared_gap_angle
     speed = BASE_ROT_SPEED / (1 + i * 0.15)
 
     arc = Arc(
@@ -133,10 +131,32 @@ def in_gap(theta, gap):
     return d < GAP_SIZE / 2 or d > 2 * np.pi - GAP_SIZE / 2
 
 # ======================
+# PARTICLES (Optimized using Scatter)
+# ======================
+# We use a single scatter collection for all particles to maximize FPS
+particle_scatter = ax.scatter([], [], s=5, alpha=0.9, edgecolors="none")
+particles_data = []
+
+def spawn_particles(x, y, color):
+    """Add new particle data to the system."""
+    num_particles = 25
+    for _ in range(num_particles):
+        angle = np.random.uniform(0, 2 * np.pi)
+        speed = np.random.uniform(1.0, 4.5)
+        p_vel = np.array([np.cos(angle) * speed, np.sin(angle) * speed])
+        
+        particles_data.append({
+            "pos": np.array([x, y]),
+            "vel": p_vel,
+            "life": 0.4 + np.random.uniform(0, 0.4),
+            "color": color
+        })
+
+# ======================
 # UPDATE FUNCTION
 # ======================
 def update(frame):
-    global ball_pos, ball_vel, ROT_DIR, elapsed_time, SIM_LENGTH, simulation_running, cur_restitution
+    global ball_pos, ball_vel, ROT_DIR, elapsed_time, SIM_LENGTH, simulation_running, cur_restitution, particles_data
 
     if not simulation_running:
         return [ball] + [r["arc"] for r in rings]
@@ -170,6 +190,8 @@ def update(frame):
                 if in_gap(theta_ball, ring["gap_angle"]):
                     ring["alive"] = False
                     ring["arc"].set_visible(False)
+                    # ✨ SPAWN PARTICLES
+                    spawn_particles(ball_pos[0], ball_pos[1], RING_COLOR)
 
                     # � NERF: Decrease speed and bounce power
                     ball_vel *= 0.6
@@ -211,20 +233,20 @@ def update(frame):
             SIM_LENGTH = elapsed_time
             print(f"✅ Simulation Complete!")
             print(f"⏱️  Actual SIM_LENGTH: {SIM_LENGTH:.2f} seconds")
-            print(f"🎯 Target was: {TARGET_SIM_LENGTH} seconds")
+            
+            if SIM_LENGTH < 20.0:
+                logger.info("⏩ Too fast (<20s). Auto-Restarting...")
+                reset_simulation()
+                return [ball, timer_text, particle_scatter] + [r["arc"] for r in rings]
+
             simulation_running = False
-            # We don't stop the animation source immediately to allow the last frame to render
-            # but we flag it to stop processing physics.
             ani.event_source.stop()
 
-    # Update visuals
-    for ring in rings:
-        if not ring["alive"]:
-            continue
+    # Update visuals only for ALIVE rings
+    living_rings = [r for r in rings if r["alive"]]
+    for ring in living_rings:
         ring["arc"].theta1 = np.degrees(ring["gap_angle"] + GAP_SIZE / 2)
-        ring["arc"].theta2 = np.degrees(
-            ring["gap_angle"] - GAP_SIZE / 2 + 2 * np.pi
-        )
+        ring["arc"].theta2 = np.degrees(ring["gap_angle"] - GAP_SIZE / 2 + 2 * np.pi)
 
     # Update stopwatch
     mins = int(elapsed_time // 60)
@@ -232,11 +254,105 @@ def update(frame):
     cent = int((elapsed_time * 100) % 100)
     timer_text.set_text(f"{mins:02d}:{secs:02d}:{cent:02d}")
 
+    # ⏱️ AUTO-RESTART: If exceeds 30 seconds
+    if elapsed_time > 30.0:
+        logger.info("⏰ Time Limit Reached (30s). Auto-Restarting...")
+        reset_simulation()
+        return [ball, timer_text, particle_scatter] + [r["arc"] for r in rings]
+
+    # 🎇 Update Particles (Highly Optimized)
+    alive_p = []
+    points = []
+    colors = []
+    
+    for p in particles_data:
+        p["life"] -= DT
+        if p["life"] > 0:
+            p["vel"][1] += GRAVITY * DT
+            p["pos"] += p["vel"] * DT
+            alive_p.append(p)
+            points.append(p["pos"])
+            # Alpha logic: mapping color name to RGBA
+            rgb = plt.cm.colors.to_rgba(p["color"])
+            colors.append((rgb[0], rgb[1], rgb[2], p["life"]))
+    
+    particles_data[:] = alive_p
+    
+    if points:
+        particle_scatter.set_offsets(points)
+        particle_scatter.set_color(colors)
+        particle_scatter.set_visible(True)
+    else:
+        particle_scatter.set_visible(False)
+
     ball.center = ball_pos
-    return [ball, timer_text] + [r["arc"] for r in rings]
+    return [ball, timer_text, particle_scatter] + [r["arc"] for r in rings]
+
+# ======================
+# INTERACTIVITY & RESET
+# ======================
+def reset_simulation():
+    global ball_pos, ball_vel, cur_restitution, elapsed_time, simulation_running, ROT_DIR, rings, particles_data, RING_COLOR, MAX_SPEED, MIN_SPEED
+    
+    # 🧹 Clear Particles
+    particles_data.clear()
+    particle_scatter.set_offsets(np.empty((0, 2)))
+    
+    # 🏎️ SCALE PHYSICS
+    ball_pos = np.array([0.0, 0.0])
+    ball_vel = np.array([1.2, 0.0]) 
+    MAX_SPEED = MAX_SPEED_BASE
+    MIN_SPEED = MIN_SPEED_BASE
+    cur_restitution = 1.8           
+    
+    elapsed_time = 0.0
+    ROT_DIR = 1
+    
+    # 🎲 SHARED RANDOM GAP POSITION
+    shared_gap_angle = np.random.uniform(0, 2 * np.pi)
+    
+    # Reset rings
+    for i, ring in enumerate(rings):
+        ring["alive"] = True
+        ring["arc"].set_visible(True)
+        # Apply current speed multiplier to rings
+        ring["speed"] = (BASE_ROT_SPEED) / (1 + i * 0.15)
+        # All rings start aligned at the shared center
+        ring["gap_angle"] = shared_gap_angle
+    
+    # Reset UI
+    timer_text.set_text("00:00:00")
+    
+    # Reset Colors
+    new_ball_color, new_ring_color = get_contrast_colors()
+    RING_COLOR = new_ring_color # Update global for particles
+    ball.set_color(new_ball_color)
+    for ring in rings:
+        ring["arc"].set_color(new_ring_color)
+    
+    # 🛠️ macOS Stability: Only start if not already running
+    if not simulation_running:
+        simulation_running = True
+        try:
+            if ani.event_source:
+                ani.event_source.start()
+        except Exception:
+            pass
+    else:
+        simulation_running = True
+
+def on_key(event):
+    if event.key == "enter":
+        reset_simulation()
+
+fig.canvas.mpl_connect("key_press_event", on_key)
+
+# Configure logging for the script
+logging.basicConfig(level=logging.INFO, format="%(message)s")
+logger = logging.getLogger("BallSim")
 
 # ======================
 # RUN ANIMATION
 # ======================
-ani = FuncAnimation(fig, update, interval=1000 / FPS, blit=True)
+ani = FuncAnimation(fig, update, interval=1000 / FPS, blit=True, cache_frame_data=False)
 plt.show()

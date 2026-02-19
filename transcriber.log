@@ -99,3 +99,25 @@
 2026-02-17 19:15:18,835 [INFO] Saved: Mark Zuckerberg Showed Me Secret Future Tech [ecqavad2D30].json
 2026-02-17 19:15:18,851 [INFO] Saved: Mark Zuckerberg Showed Me Secret Future Tech [ecqavad2D30]_simple.json
 2026-02-17 19:15:18,865 [INFO] Transcriber Process Complete
+2026-02-19 14:01:12,548 [INFO] Loading Faster-Whisper model: small
+2026-02-19 14:01:12,993 [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
+2026-02-19 14:01:13,970 [INFO] Starting Transcriber Service
+2026-02-19 14:01:13,970 [INFO] Extracting audio from You’re Not Behind (Yet)： How to Learn AI in 19 Minutes [j0YENi6U0tE].mp4...
+2026-02-19 14:01:15,527 [INFO] Transcribing You’re Not Behind (Yet)： How to Learn AI in 19 Minutes [j0YENi6U0tE].mp4...
+2026-02-19 14:01:15,773 [INFO] Processing audio with duration 19:55.596
+2026-02-19 14:01:16,708 [INFO] Transcription language: en (1.00)
+2026-02-19 14:08:03,959 [INFO] Transcription finished in 408.43s
+2026-02-19 14:08:03,991 [INFO] Saved: You’re Not Behind (Yet)： How to Learn AI in 19 Minutes [j0YENi6U0tE].json
+2026-02-19 14:08:04,011 [INFO] Saved: You’re Not Behind (Yet)： How to Learn AI in 19 Minutes [j0YENi6U0tE]_simple.json
+2026-02-19 14:08:04,016 [INFO] Transcriber Process Complete
+2026-02-19 14:29:32,381 [INFO] Loading Faster-Whisper model: small
+2026-02-19 14:29:32,824 [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-small/revision/main "HTTP/1.1 200 OK"
+2026-02-19 14:29:33,760 [INFO] Starting Transcriber Service
+2026-02-19 14:29:33,760 [INFO] Extracting audio from Your Doctor's Least Favorite TikToks [sDZVbfN07tg].mp4...
+2026-02-19 14:29:34,613 [INFO] Transcribing Your Doctor's Least Favorite TikToks [sDZVbfN07tg].mp4...
+2026-02-19 14:29:34,741 [INFO] Processing audio with duration 17:33.954
+2026-02-19 14:29:35,508 [INFO] Transcription language: en (1.00)
+2026-02-19 14:34:14,209 [INFO] Transcription finished in 279.60s
+2026-02-19 14:34:14,232 [INFO] Saved: Your Doctor's Least Favorite TikToks [sDZVbfN07tg].json
+2026-02-19 14:34:14,247 [INFO] Saved: Your Doctor's Least Favorite TikToks [sDZVbfN07tg]_simple.json
+2026-02-19 14:34:14,251 [INFO] Transcriber Process Complete
